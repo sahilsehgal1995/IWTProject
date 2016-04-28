@@ -1,0 +1,15 @@
+<ion-view view-title="Students">
+  <ion-content has-header="true"> 
+       <div class="list">
+	  <a class="item item-thumbnail-left" ng-repeat="student in students">
+	    <img src="img/student.png">
+	    <h2>{{student.Name}}</h2>
+	    <p><b>Roll Number:</b> {{student.RollNo}}</p>
+	    <p><b>CGPA:</b> {{student.CGPA}}</p>
+	    <p><b>Father's Name:</b> {{student.FName}}</p>
+	    <p><b>Mother's Name:</b> {{student.MName}}</p>
+	  </a>
+      </div>
+      </ion-content>
+</ion-view>
+

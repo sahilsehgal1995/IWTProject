@@ -1,0 +1,25 @@
+<ion-view view-title="CSE Department, UIET">
+  <ion-content>
+	<div class="list card" ng-repeat="teacher in teachers track by $index">
+
+	  <div class="item">
+	    <h2>{{teacher.Name}}</h2>
+	    <p>{{teacher.Designation}}</p>
+	  </div>
+
+	  <div class="item item-body">
+	    <img class="full-image" ng-src="img/{{$index+1}}.png" height="200px">
+	    <p>
+	      <b>Date of Birth: </b>{{teacher.Dob}}
+	    <br>
+	      <b>Contact: </b>{{teacher.Dob}}
+	    <br>
+	      <b>Achievements: </b><br>
+	       <p ng-repeat="Achievement in teacher.Achievements">{{$index+1}}. {{Achievement}}</p>
+	    </p>
+	    
+	  </div>
+
+	</div>
+  </ion-content>
+</ion-view>

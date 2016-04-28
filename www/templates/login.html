@@ -1,0 +1,20 @@
+<ion-view view-title="Login">
+  <ion-content has-header="true"> 
+       <form ng-submit="Login()">
+                <div class="list">
+                    <label class="item item-input">
+                        <span class="input-label" ng-init="user.Mobile = ''">Email Address</span>
+                        <input type="email" ng-model="user.Email">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Password</span>
+                        <input type="password" ng-model="user.Password">
+                    </label>
+                    <label class="item">
+                        <button class="button button-block button-dark" ng-click="Login()" ng-disabled="!user.Email || !user.Password">Log in</button>
+                    </label>
+                </div>
+            </form>
+      </ion-content>
+</ion-view>
+

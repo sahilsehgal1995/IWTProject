@@ -1,0 +1,15 @@
+<ion-view view-title="CSE Department, UIET">
+  <ion-content>
+	<div class="list card" ng-repeat="sem in Syllabus">
+
+	  <a href="#" class="item item-divider">  
+	    Semester {{sem.Sem}}
+	  </a>
+	  <a href="#" class="item item-icon-left" ng-repeat="subject in sem.Subjects">
+	    
+	    {{subject}}
+	  </a>
+
+	</div>
+  </ion-content>
+</ion-view>

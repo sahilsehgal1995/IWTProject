@@ -1,0 +1,59 @@
+<ion-view view-title="SignUp">
+  <ion-content has-header="true"> 
+       <form ng-model="form1" ng-submit="Signup()">
+                <div class="list">
+                    <label class="item item-input">
+                        <span class="input-label"> Full Name</span>
+                        <input type="text" ng-model="user.name" ng-init="user.name=''" placeholder="Mark Zuckerberg">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label"> Address</span>
+                        <input type="text" ng-model="user.address" ng-init="user.address=''" placeholder="H.No 121 Street 7, Sector 25">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label"> City</span>
+                        <input type="text" ng-model="user.city" placeholder="Mohali" ng-init="user.city=''">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label"> State</span>
+                        <input type="text" ng-model="user.state" placeholder="Punjab" ng-init="user.state=''">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Email Address</span>
+                        <input type="text" ng-model="user.Email" placeholder="mark1234@gmail.com" ng-init="user.Email=''">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Password</span>
+                        <input type="password" ng-model="user.Password" placeholder="6-12 AlphaNumeric password" ng-init="user.Password=''">
+                    </label>
+                    <label class="item item-input item-select">
+                        <span class="input-label">ID Proof</span>
+                        <select ng-model='user.uidtype' placeholder="UID">
+			  <option>Driving License</option>
+			  <option>Aadhar Card</option>
+			  <option>Voter ID</option>
+			  <option>Ration Card</option>
+			  <option>Passport Number</option>
+			</select>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">ID Number</span>
+                        <input type="text" ng-model="user.idnum" placeholder="11AA12451">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Phone Number</span>
+                        <input type="number" ng-model="user.Mobile" placeholder="09988772312">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Secret Key</span>
+                        <input type="password" ng-model="secretkey">
+                    </label>
+                    <ion-checkbox ng-model="agreement"><span class="input-label">Accept all the terms and conditions.*</span></ion-checkbox>
+                    <label class="item">
+                        <button class="button button-block button-assertive" ng-click="register()" ng-disabled="!user.name || !user.address || !user.city || !user.state || !user.Email || !user.Password || !user.uidtype || !user.idnum || !user.Mobile || !agreement || secretkey!='uiet'" type="submit" type="submit">Register</button>
+                    </label>
+                </div>
+            </form>
+      </ion-content>
+</ion-view>
+
